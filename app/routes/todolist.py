@@ -70,7 +70,9 @@ async def getListPDF(db:db_dependency,user_token:user_dependency,response: Respo
             owner_id = getOwnerId(db,List_id)
             owner_email = getEmail(db,owner_id)
             await create_pdf("ToDoList",todo_item.all(),owner_email)
-            return
+            headers = {"Content-Disposition": "inline; filename=ToDoList.pdf"}  
+            response = FileResponse(".\\static\\ToDoList.pdf", media_type="application/pdf", headers=headers)
+            return response
 
         else:
             response.status_code = status.HTTP_404_NOT_FOUND
