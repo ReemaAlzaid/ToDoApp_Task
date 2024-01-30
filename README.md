@@ -5,7 +5,7 @@ ToDo Application with user authentication.
 ## Backend
 - Framework - FastAPI
 - DB - PostgreSQL, SQLAlchemy
-- Secruity - Oauth2
+- Security - Oauth2
 - Create PDF - fpdf2
 
 ## Start
@@ -14,7 +14,7 @@ ToDo Application with user authentication.
 - test the APIs in Postman with the available collection 'ToDoApp.postman_collection.json'
 
 ## Functional requirements 
-- Register: - The user can register by email and create a user name and 
+- Register: - The user can register by email and create a username and 
 password to use the app, the email, user name, and password 
 will be marked as required in the user registration form.
 - Login: - The user can log in to his To-Do app using the username and 
@@ -33,11 +33,9 @@ app page with the name of the owner on the top of the list.
 - Stop sharing: - The user can cancel sharing his task list.
 
 ## Non-functional requirements: -
-- Performance: app processes shall not take a long time in execution 
-especially registration and user login. 
-- Security: The app must be secured no one can use the app without 
-a username and password.
-- The user can export his task list as a PDF.
+- Performance: app processes do not take a long time to execute, especially registration and user login. 
+- Security: The app is secured and no one can use the app without logging in.
+- The user can export their tasks list as a PDF.
 
 
 Project structure
